@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  background-color: #1a1a1a; /* Slightly dark background */
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Left and Right Sections */
+main .left,
+main .right {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
+}
+
+/* Left Section with Gradient */
+main .left {
+  background: linear-gradient(135deg, #000000, #1a1a1a);
+  position: relative;
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.1);
+  border: 1px solid #2c2c2c;
+}
+
+/* Code Section */
+.left .code,
+.code pre,
+.code pre code {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 0.7rem;
+  background: #0c0c0c;
+  padding: 1rem;
+  font-family: 'Courier New', monospace;
+  color: #f8f8f2;
+}
+
+/* Review Button with Gradient */
+main .left .review {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: linear-gradient(135deg, #ff79c6, #bd93f9);
+  color: #000000;
+  padding: 0.5rem 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.7rem;
+  transition: transform 0.2s ease-in-out, background 0.3s, box-shadow 0.3s;
+}
+
+/* Hover Effect */
+main .left .review:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #ff92d0, #d0a9ff);
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+
+}
+
+/* Right Section with Softer Contrast */
+main .right {
+  background: linear-gradient(135deg, #2b2b2b, #3a3a3a);
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  overflow: auto;
+  border: 1px solid #444;
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.1);
+}
